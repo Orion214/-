@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>我的微景观世界</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "微软雅黑", sans-serif;
+      background: #f5f5f5;
+      color: #333;
+    }
+
+    /* 背景区域 */
+    .hero {
+      height: 100vh;
+      background: url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1350&q=80')
+                  center/cover no-repeat;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 20px;
+      position: relative;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.35);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      color: #fff;
+      max-width: 700px;
+      animation: fadeIn 1.2s ease-out;
+    }
+
+    h1 {
+      font-size: 48px;
+      margin-bottom: 16px;
+      letter-spacing: 2px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.6;
+      opacity: 0.9;
+    }
+
+    /* 按钮 */
+    .btn-box {
+      margin-top: 32px;
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 12px 28px;
+      background: #ffffffdd;
+      color: #333;
+      border-radius: 28px;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: bold;
+      transition: 0.25s;
+      backdrop-filter: blur(4px);
+    }
+
+    .btn:hover {
+      background: #fff;
+      transform: translateY(-4px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+
+<body>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>微景观 · 我的世界</h1>
+      <p>
+        你的瓶盖 NFC 是钥匙。  
+        你的微景观是一座个人宇宙。  
+        打开——你进入一个只属于你的生命片段、生态脉搏与记忆场景。
+      </p>
+
+      <div class="btn-box">
+        <a class="btn" href="concept.html">理念入口</a>
+        <a class="btn" href="myworld.html">进入我的世界</a>
+        <a class="btn" href="about.html">项目说明</a>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
